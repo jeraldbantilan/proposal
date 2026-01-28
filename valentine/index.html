@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mergeRequest: forever</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="hearts-container" id="hearts"></div>
+  <main class="card" id="card">
+    <span class="heart">❤</span>
+
+    <div class="closed" id="closed">
+      <p class="click-text">
+        <span class="code">$</span> git commit -m<br />
+        <span class="message">"open when ready"</span>
+      </p>
+      <p class="hint">(click)</p>
+    </div>
+
+    <div class="open" id="open">
+      <pre id="terminal"></pre>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

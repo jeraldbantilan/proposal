@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #111 0%, #000 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e6e6e6;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 3rem;
+  max-width: 520px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+  cursor: pointer;
+}
+
+.closed {
+  text-align: center;
+}
+
+.click-text {
+  font-size: 1rem;
+}
+
+.message {
+  color: #ff6b8a;
+}
+
+.hint {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.open {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.code {
+  color: #ff6b8a;
+}
+
+.highlight {
+  color: #ff3b6f;
+}
+
+.cursor::after {
+  content: "▍";
+  animation: blink 1s infinite;
+}
+
+.heart {
+  position: absolute;
+  top: -12px;
+  right: 18px;
+  font-size: 1.4rem;
+  color: #ff3b6f;
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  color: rgba(255, 59, 111, 0.35);
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
